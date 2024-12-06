@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Japon Pastanesi | Dashboard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Japon Pastanesi Yönetim Paneli" name="keywords">
+    <meta content="Japon Pastanesi yönetim paneli dashboard." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle JS (Popper.js dahil) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Toastr CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid px-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-4 text-center bg-secondary py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <i class="bi bi-shield fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Yönetim</h6>
+                        <span>Sistemi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center bg-primary border-inner py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="m-0 text-uppercase text-white"><i
+                                class="fa fa-birthday-cake fs-1 text-dark me-3"></i>Japon Pastanesi</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center bg-secondary py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <i class="bi bi-person-circle fs-1 text-primary me-3"></i>
+                    <div class="text-start">
+                        <h6 class="text-uppercase mb-1">Yönetici</h6>
+                        <span>Utku Genç</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid px-0 d-lg-block d-lg-none">
+        <div class="row gx-0">
+    
+            <div class="col-lg-4 text-center bg-primary border-inner py-3">
+                <div class="d-inline-flex align-items-center justify-content-center">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="m-0 text-uppercase text-white">
+                            <i class="fa fa-birthday-cake fs-1 text-dark me-3"></i>Japon Pastanesi
+                        </h1>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Yönetim ve Yönetici Div'leri Yan Yana ve Ekranı Dolduracak Şekilde Yayılacak -->
+            <div class="col-lg-8 d-flex px-0">
+                <div class="col-6 d-flex text-center bg-secondary py-3">
+                    <div class="d-inline-flex align-items-center justify-content-center w-100">
+                        <i class="bi bi-shield fs-1 text-primary me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-uppercase mb-1">Yönetim</h6>
+                            <span>Sistemi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex text-center bg-secondary py-3">
+                    <div class="d-inline-flex align-items-center justify-content-center w-100">
+                        <i class="bi bi-person-circle fs-1 text-primary me-3"></i>
+                        <div class="text-start">
+                            <h6 class="text-uppercase mb-1">Yönetici</h6>
+                            <span>Utku Genç</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <!-- Topbar End -->
+    <!-- Dashboard Content Start -->
+    <div class="container-fluid bg-img  mb-5">
+        <div class="container py-5">
+            <div class="row gx-5 gy-4 ">
+                <div class="row g-4">
+                    <!-- Kartlar -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-sm bg-primary text-white" data-bs-toggle="modal"
+                            data-bs-target="#uyelerModal" style="cursor:pointer;">
+                            <div class="card-body">
+                                <h5 class="text-light">Toplam Üyeler</h5>
+                                <h2 class="text-light">83.540</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-sm bg-success text-white" data-bs-toggle="modal"
+                            data-bs-target="#siparislerModal" style="cursor:pointer;">
+                            <div class="card-body">
+                                <h5 class="text-light">Toplam Siparişler</h5>
+                                <h2 class="text-light">284.917</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card border-0 shadow-sm bg-danger text-white">
+                            <div class="card-body">
+                                <h5 class="text-light">Site Girişleri (Aylık)</h5>
+                                <h2 class="text-light">7.342</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="container-fluid mt-5">
+            <div class=" d-flex position-relative text-center mx-auto mb-5 pb-3 section-title">
+                <div class="container mt-5 ">
+                    <!-- Ürün Ekleme Butonu -->
+                    <button type="button" class="btn btn-primary mb-3" style="width: 200px;" data-bs-toggle="modal"
+                        data-bs-target="#urunEkleModal">
+                        Ürün Ekle
+                    </button>
+
+                    <!-- Duyuru Ekleme Butonu -->
+                    <button type="button" class="btn btn-secondary mb-3" style="width: 200px;" data-bs-toggle="modal"
+                        data-bs-target="#duyuruEkleModal">
+                        Duyuru Ekle
+                    </button>
+                </div>
+            </div>
+            <!-- Data Table -->
+            <div class="row mt-5 rounded">
+                <!-- Son Siparişler-->
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+                            <h4 class="mb-4 ">Son Siparişler</h4>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Müşteri Adı</th>
+                                        <th>Ürün</th>
+                                        <th>Fiyat</th>
+                                        <th>Tarih</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Ahmet Yılmaz</td>
+                                        <td>Çilekli Pasta</td>
+                                        <td>₺99,90</td>
+                                        <td>30/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Ayşe Kaya</td>
+                                        <td>Fıstıklı Monaka Tatlısı</td>
+                                        <td>₺128</td>
+                                        <td>29/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Mehmet Demir</td>
+                                        <td>Kagerou Kek</td>
+                                        <td>₺44</td>
+                                        <td>28/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Selin Çetin</td>
+                                        <td>Deniz Ürünlü Baharatlı Senbei</td>
+                                        <td>₺72</td>
+                                        <td>27/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Fatih Kurt</td>
+                                        <td>Sütlü Manju (Beyaz Gül Sütüyle)</td>
+                                        <td>₺240</td>
+                                        <td>26/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Deniz Aydın</td>
+                                        <td>Ay Kek (Yumurta ve Kestane Dolgulu)</td>
+                                        <td>₺250</td>
+                                        <td>25/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Burcu Şahin</td>
+                                        <td>Buttercream Çiçek Buketi Pasta</td>
+                                        <td>₺105,90</td>
+                                        <td>24/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Onur Eren</td>
+                                        <td>Elmalı Pay</td>
+                                        <td>₺90</td>
+                                        <td>23/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Canan Tekin</td>
+                                        <td>Rustik Makaron ve Güller Pastası</td>
+                                        <td>₺229,90</td>
+                                        <td>22/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Emre Özkan</td>
+                                        <td>Zunda Ezmesiyle Mochi</td>
+                                        <td>₺110</td>
+                                        <td>21/11/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Ayşe Demir</td>
+                                        <td>Elmalı Pay</td>
+                                        <td>₺90</td>
+                                        <td>04/12/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Emre Kara</td>
+                                        <td>Zunda Ezmesiyle Mochi</td>
+                                        <td>₺55</td>
+                                        <td>03/12/2024</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Selin Yılmaz</td>
+                                        <td>Azuki Ezmesiyle Sandviç Tatlı</td>
+                                        <td>₺40</td>
+                                        <td>02/12/2024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a class="bg-primary btn btn-primary w-100 mt-3" style="height: 50px;border-radius: 10px;" data-bs-toggle="modal"
+                            data-bs-target="#siparislerModal" style="cursor:pointer;">
+                            Tüm Şiparişler
+                        </a>
+                    </div>
+
+                </div>
+                <!-- Duyuru Düzenleme -->
+                <div class="row mt-5 rounded">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+                                <h4 class="mb-4 ">Duyuru Düzenleme</h4>
+
+                                <div class="p-2">
+                                    <div class="row align-items-center">
+                                        <!-- Duyuru 10 -->
+                                        <div class="duyuru d-flex align-items-center mb-3">
+                                            <img src="img/tatli.jpeg" class="img-fluid me-3"
+                                                alt="Tatlı Günler Kampanyası"
+                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Tatlı Günler Kampanyası</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Hafta boyunca her gün farklı bir tatlıya özel %10 indirimle tatlı
+                                                    anlarınızı daha da tatlandırın.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end " style="width: 120px;">15 Ocak
+                                                2025
+                                            </p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 9 -->
+                                        <div class="duyuru d-flex align-items-center mb-3">
+                                            <img src="img/yeni_sube.jpg" class="img-fluid me-3" alt="Yeni Şube Açılışı"
+                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Yeni Şube Açılışı</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Yeni şubemiz açılıyor! Açılışa özel ikramlarımız ve sürpriz
+                                                    indirimlerimizi kaçırmayın.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">10 Ocak 2025
+                                            </p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 8 -->
+                                        <div class="duyuru d-flex align-items-center mb-3">
+                                            <img src="img/kis_menu.jpg" class="img-fluid me-3" alt="Kış Menü Lansmanı"
+                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Kış Menü Lansmanı</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Kış mevsimine özel tariflerimizi keşfedin! Yeni sıcak içecekler ve
+                                                    tatlılarla sizi bekliyoruz.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">01 Ocak 2025
+                                            </p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 7 -->
+                                        <div class="duyuru d-flex align-items-center mb-3">
+                                            <img src="img/hafta_sonu.jpeg" class="img-fluid me-3"
+                                                alt="Hafta Sonu İkramı"
+                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Hafta Sonu İkramı</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Cumartesi günü tüm kahve siparişlerinizle yanında tatlı ikramımız
+                                                    var. Hafta sonunuza lezzet katın!
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end me-2" style="width: 120px;">30
+                                                Aralık
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 6 -->
+                                        <div class="duyuru d-flex align-items-center mb-3">
+                                            <img src="img/yeni_yil.jpeg" class="img-fluid me-3" alt="Yeni Yıl Çekilişi"
+                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Yeni Yıl Çekilişi</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Yeni yıl çekilişimize katılın ve bir yıl boyunca ücretsiz tatlı
+                                                    keyfi yaşama şansı kazanın!
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">25 Aralık
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+                                        <!-- Duyuru 5 -->
+                                        <div class="duyuru d-flex align-items-center mb-3"
+                                            onclick="window.location.href='duyuru.html'" style="cursor:pointer;">
+                                            <img src="img/japan_cake.jpg" class="img-fluid me-3"
+                                                alt="Doğum Günü Kampanyası"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Doğum Günü Kampanyası</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Doğum gününüzde özel pastalarımızda %15 indirim sizi bekliyor! Özel
+                                                    gününüzü bizimle kutlayın.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">20 Aralık
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 4 -->
+                                        <div class="duyuru d-flex align-items-center mb-3"
+                                            onclick="window.location.href='duyuru.html'" style="cursor:pointer;">
+                                            <img src="img/YoshiBirthdayCakex.webp" class="img-fluid me-3"
+                                                alt="Workshop Duyurusu"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Şefimizden Özel Workshop</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Pastacılık dünyasına adım atmak ister misiniz? Workshop
+                                                    etkinliğimizle eşsiz tarifler öğrenin.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">10 Aralık
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 3 -->
+                                        <div class="duyuru d-flex align-items-center mb-3"
+                                            onclick="window.location.href='duyuru.html'" style="cursor:pointer;">
+                                            <img src="img/yeni_yil.jpeg" class="img-fluid me-3" alt="Yılbaşı Tatlıları"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Yılbaşı Tatlıları</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Yılbaşı sofralarınızı renklendirecek özel tatlılarımız satışta!
+                                                    Siparişlerinizi şimdiden verin.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">01 Aralık
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 2 -->
+                                        <div class="duyuru d-flex align-items-center mb-3"
+                                            onclick="window.location.href='duyuru.html'" style="cursor:pointer;">
+                                            <img src="img/black_friday_cake.jpg" class="img-fluid me-3"
+                                                alt="Black Friday İndirimleri"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Black Friday İndirimleri</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Black Friday’e özel tüm ürünlerde %20 indirim! Sadece 24 Kasım günü
+                                                    geçerlidir.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">24 Kasım
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+                                        <hr>
+
+                                        <!-- Duyuru 1 -->
+                                        <div class="duyuru d-flex align-items-center mb-3"
+                                            onclick="window.location.href='duyuru.html'" style="cursor:pointer;">
+                                            <img src="img/DiscoSantaCake.webp" class="img-fluid me-3"
+                                                alt="Yeni Sezon Pastaları"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Yeni Sezon Pastaları</h5>
+                                                <p class="mb-0 text-muted small">
+                                                    Sezonun trend tatlarıyla hazırlanan pastalarımızı deneyin! Yeni
+                                                    lezzetler sizi bekliyor.
+                                                </p>
+                                            </div>
+                                            <p class="text-muted small mb-0 text-end" style="width: 120px;">15 Kasım
+                                                2024</p>
+                                            <!-- Butonlar -->
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editModal" onclick="openEditModal()">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deleteModal" onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grafik Alanı -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h4 class="mb-4">Sipariş ve Giriş Verileri</h4>
+                                <canvas id="dataChart" style="max-height: 500px;" height="500px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ürün Ekle Modal -->
+                <div class="modal fade" id="urunEkleModal" tabindex="-1" aria-labelledby="urunEkleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="urunEkleModalLabel">Ürün Ekle</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <!-- Ürün Adı -->
+                                    <div class="mb-3">
+                                        <label for="urunAdi" class="form-label">Ürün Adı</label>
+                                        <input type="text" class="form-control" id="urunAdi"
+                                            placeholder="Örn: Çikolatalı Kek">
+                                    </div>
+                                    <!-- Ürün Açıklaması -->
+                                    <div class="mb-3">
+                                        <label for="urunAciklama" class="form-label">Ürün Açıklaması</label>
+                                        <textarea class="form-control" id="urunAciklama" rows="4"
+                                            placeholder="Örn: Özel tarifimizle hazırlanan nefis çikolatalı kek!"></textarea>
+                                    </div>
+                                    <!-- Ürün Fiyatı -->
+                                    <div class="mb-3">
+                                        <label for="urunFiyati" class="form-label">Ürün Fiyatı</label>
+                                        <input type="number" class="form-control" id="urunFiyati"
+                                            placeholder="Örn: 25.50" step="0.01">
+                                    </div>
+                                    <!-- Görsel Seç -->
+                                    <div class="mb-3">
+                                        <label for="urunGorsel" class="form-label">Görsel Yükle</label>
+                                        <input type="file" class="form-control" id="urunGorsel" accept="image/*">
+                                    </div>
+                                    <!-- Görsel Önizleme -->
+                                    <div class="mb-3 text-center">
+                                        <img id="urunPreviewImage" src="https://via.placeholder.com/200"
+                                            class="img-fluid border rounded" style="max-height: 200px;"
+                                            alt="Ürün Görsel Önizleme">
+                                    </div>
+                                    <!-- Kaydet Butonu -->
+                                    <button type="submit" class="btn btn-primary">Ürünü Kaydet</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duyuru Ekle Modal -->
+                <div class="modal fade" id="duyuruEkleModal" tabindex="-1" aria-labelledby="duyuruEkleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="duyuruEkleModalLabel">Duyuru Ekle</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <!-- Duyuru Başlığı -->
+                                    <div class="mb-3">
+                                        <label for="duyuruBaslik" class="form-label">Duyuru Başlığı</label>
+                                        <input type="text" class="form-control" id="duyuruBaslik"
+                                            placeholder="Örn: Yeni Lezzetler">
+                                    </div>
+                                    <!-- Duyuru Açıklaması -->
+                                    <div class="mb-3">
+                                        <label for="duyuruAciklama" class="form-label">Duyuru Açıklaması</label>
+                                        <textarea class="form-control" id="duyuruAciklama" rows="4"
+                                            placeholder="Örn: Yeni sezon tatlılarımız geldi!"></textarea>
+                                    </div>
+                                    <!-- Görsel Seç -->
+                                    <div class="mb-3">
+                                        <label for="duyuruGorsel" class="form-label">Görsel Yükle</label>
+                                        <input type="file" class="form-control" id="duyuruGorsel" accept="image/*">
+                                    </div>
+                                    <!-- Görsel Önizleme -->
+                                    <div class="mb-3 text-center">
+                                        <img id="previewImage" src="https://via.placeholder.com/200"
+                                            class="img-fluid border rounded" style="max-height: 200px;"
+                                            alt="Görsel Önizleme">
+                                    </div>
+                                    <!-- Dosya Seç -->
+                                    <div class="mb-3">
+                                        <label for="duyuruDosya" class="form-label">PDF Dosyası Yükle</label>
+                                        <input type="file" class="form-control" id="duyuruDosya" accept=".pdf">
+                                    </div>
+                                    <!-- Kaydet Butonu -->
+                                    <button type="submit" class="btn btn-primary">Duyuruyu Kaydet</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toast Container -->
+                <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+                    <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                        aria-live="assertive" aria-atomic="true">
+                        <div class="d-flex">
+                            <div class="toast-body">
+                                İşlem başarıyla tamamlandı!
+                            </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                                aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toplam Üyeler Modal -->
+                <div class="modal fade" id="uyelerModal" tabindex="-1" aria-labelledby="uyelerModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="uyelerModalLabel">Üyeler Listesi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Ad Soyad</th>
+                                                <th>Email</th>
+                                                <th>Kayıt Tarihi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Ahmet Yılmaz</td>
+                                                <td>ahmet@example.com</td>
+                                                <td>01/12/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Ayşe Kaya</td>
+                                                <td>ayse@example.com</td>
+                                                <td>30/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Mehmet Demir</td>
+                                                <td>mehmet@example.com</td>
+                                                <td>29/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Selin Çetin</td>
+                                                <td>selin@example.com</td>
+                                                <td>28/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Fatih Kurt</td>
+                                                <td>fatih@example.com</td>
+                                                <td>27/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Deniz Aydın</td>
+                                                <td>deniz@example.com</td>
+                                                <td>26/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Burcu Şahin</td>
+                                                <td>burcu@example.com</td>
+                                                <td>25/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Onur Eren</td>
+                                                <td>onur@example.com</td>
+                                                <td>24/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Canan Tekin</td>
+                                                <td>canan@example.com</td>
+                                                <td>23/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Emre Özkan</td>
+                                                <td>emre@example.com</td>
+                                                <td>22/11/2024</td>
+                                            </tr>
+                                            <!-- Yeni Satırlar -->
+                                            <tr>
+                                                <td>11</td>
+                                                <td>Ayşe Demir</td>
+                                                <td>ayse.demir@example.com</td>
+                                                <td>04/12/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Emre Kara</td>
+                                                <td>emre.kara@example.com</td>
+                                                <td>03/12/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>Selin Yılmaz</td>
+                                                <td>selin.yilmaz@example.com</td>
+                                                <td>02/12/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>Mehmet Yıldız</td>
+                                                <td>mehmet.yildiz@example.com</td>
+                                                <td>01/12/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>Ayşegül Tekin</td>
+                                                <td>aysegul.tekin@example.com</td>
+                                                <td>30/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16</td>
+                                                <td>Burcu Çelik</td>
+                                                <td>burcu.celik@example.com</td>
+                                                <td>29/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td>Deniz Kızıl</td>
+                                                <td>deniz.kizil@example.com</td>
+                                                <td>28/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>18</td>
+                                                <td>Fatih Şahin</td>
+                                                <td>fatih.sahin@example.com</td>
+                                                <td>27/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>Selin Eren</td>
+                                                <td>selin.eren@example.com</td>
+                                                <td>26/11/2024</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20</td>
+                                                <td>Fatih Kurt</td>
+                                                <td>fatih.kurt@example.com</td>
+                                                <td>25/11/2024</td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toplam Siparişler Modal -->
+                <div class="modal fade" id="siparislerModal" tabindex="-1" aria-labelledby="siparislerModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="siparislerModalLabel">Sipariş Listesi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div style="max-height: 400px; overflow-y: auto;">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Müşteri Adı</th>
+                                                <th>Ürün</th>
+                                                <th>Fiyat</th>
+                                                <th>Tarih</th>
+                                                <th>Teslimat Durumu</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Ahmet Yılmaz</td>
+                                                <td>Çilekli Pasta</td>
+                                                <td>₺99,90</td>
+                                                <td>30/11/2024</td>
+                                                <td>Hazırlanıyor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Ayşe Kaya</td>
+                                                <td>Fıstıklı Monaka Tatlısı</td>
+                                                <td>₺128</td>
+                                                <td>29/11/2024</td>
+                                                <td>Hazırlanıyor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Mehmet Demir</td>
+                                                <td>Kagerou Kek</td>
+                                                <td>₺44</td>
+                                                <td>28/11/2024</td>
+                                                <td>Yolda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Selin Çetin</td>
+                                                <td>Deniz Ürünlü Baharatlı Senbei</td>
+                                                <td>₺72</td>
+                                                <td>27/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Fatih Kurt</td>
+                                                <td>Sütlü Manju (Beyaz Gül Sütüyle)</td>
+                                                <td>₺240</td>
+                                                <td>26/11/2024</td>
+                                                <td>Yolda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Deniz Aydın</td>
+                                                <td>Ay Kek (Yumurta ve Kestane Dolgulu)</td>
+                                                <td>₺250</td>
+                                                <td>25/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Burcu Şahin</td>
+                                                <td>Buttercream Çiçek Buketi Pasta</td>
+                                                <td>₺105,90</td>
+                                                <td>24/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Onur Eren</td>
+                                                <td>Elmalı Pay</td>
+                                                <td>₺90</td>
+                                                <td>23/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Canan Tekin</td>
+                                                <td>Rustik Makaron ve Güller Pastası</td>
+                                                <td>₺229,90</td>
+                                                <td>22/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Emre Özkan</td>
+                                                <td>Zunda Ezmesiyle Mochi</td>
+                                                <td>₺110</td>
+                                                <td>21/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <!-- Yeni Siparişler -->
+                                            <tr>
+                                                <td>11</td>
+                                                <td>Ayşe Demir</td>
+                                                <td>Elmalı Pay</td>
+                                                <td>₺90</td>
+                                                <td>04/12/2024</td>
+                                                <td>Hazırlanıyor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Emre Kara</td>
+                                                <td>Zunda Ezmesiyle Mochi</td>
+                                                <td>₺55</td>
+                                                <td>03/12/2024</td>
+                                                <td>Yolda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13</td>
+                                                <td>Selin Yılmaz</td>
+                                                <td>Azuki Ezmesiyle Sandviç Tatlı</td>
+                                                <td>₺40</td>
+                                                <td>02/12/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14</td>
+                                                <td>Mehmet Yıldız</td>
+                                                <td>Fıstıklı Monaka Tatlısı</td>
+                                                <td>₺64</td>
+                                                <td>01/12/2024</td>
+                                                <td>Hazırlanıyor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15</td>
+                                                <td>Ayşegül Tekin</td>
+                                                <td>Kinako Mochi (Şekerli Soya Unu)</td>
+                                                <td>₺80</td>
+                                                <td>30/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16</td>
+                                                <td>Burcu Çelik</td>
+                                                <td>Kagerou Kek</td>
+                                                <td>₺44</td>
+                                                <td>29/11/2024</td>
+                                                <td>Yolda</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17</td>
+                                                <td>Deniz Kızıl</td>
+                                                <td>Sütlü Manju (Beyaz Gül Sütüyle)</td>
+                                                <td>₺120</td>
+                                                <td>28/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>18</td>
+                                                <td>Fatih Şahin</td>
+                                                <td>Kibi Dango (Yumuşak Pirinç Keki)</td>
+                                                <td>₺30</td>
+                                                <td>27/11/2024</td>
+                                                <td>Teslim Edildi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19</td>
+                                                <td>Selin Eren</td>
+                                                <td>Ay Kek (Yumurta ve Kestane Dolgulu)</td>
+                                                <td>₺50</td>
+                                                <td>26/11/2024</td>
+                                                <td>Hazırlanıyor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20</td>
+                                                <td>Fatih Kurt</td>
+                                                <td>Deniz Ürünlü Baharatlı Senbei</td>
+                                                <td>₺72</td>
+                                                <td>25/11/2024</td>
+                                                <td>Yolda</td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duyuru Düzenle Modal -->
+                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Duyuru Düzenle</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="editForm">
+                                    <div class="mb-3">
+                                        <label for="announcementTitle" class="form-label">Başlık</label>
+                                        <input type="text" class="form-control" id="announcementTitle"
+                                            value="Yeni Sezon Pastaları">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="announcementDescription" class="form-label">Açıklama</label>
+                                        <textarea class="form-control"
+                                            id="announcementDescription">Sezonun trend tatlarıyla hazırlanan pastalarımızı deneyin! Yeni lezzetler sizi bekliyor.</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="announcementDate" class="form-label">Tarih</label>
+                                        <input type="date" class="form-control" id="announcementDate"
+                                            value="2024-11-15">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    onclick="saveEdit()">Kaydet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duyuru Sil Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteModalLabel">Duyuru Sil</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bu duyuruyu silmek istediğinize emin misiniz?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                    onclick="deleteAnnouncement()">Evet,
+                                    Sil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Dashboard Content End -->
+            <!-- Chart.js -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                // Grafik Verileri
+                const ctx = document.getElementById('dataChart').getContext('2d');
+                const dataChart = new Chart(ctx, {
+                    type: 'line', // Çizgi grafik türü
+                    data: {
+                        labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'], // Aylar
+                        datasets: [
+                            {
+                                label: 'Siparişler',
+                                data: [300, 400, 350, 450, 500, 600], // Sipariş verileri
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                fill: true
+                            },
+                            {
+                                label: 'Site Girişleri',
+                                data: [800, 900, 850, 1000, 1100, 1200], // Site giriş verileri
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                fill: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Aylık Veriler'
+                            }
+                        }
+                    }
+                });
+                // Ürün Ekleme Formu
+                document.querySelector('#urunEkleModal form').addEventListener('submit', function (e) {
+                    e.preventDefault(); // Formun varsayılan submit işlemini durdurur
+                    showToast('Ürün başarıyla eklendi!', 'success');
+                    // Modal kapatma
+                    const urunModal = bootstrap.Modal.getInstance(document.getElementById('urunEkleModal'));
+                    urunModal.hide();
+                });
+                // Duyuru Ekleme Formu
+                document.querySelector('#duyuruEkleModal form').addEventListener('submit', function (e) {
+                    e.preventDefault(); // Formun varsayılan submit işlemini durdurur
+                    showToast('Duyuru başarıyla yayınlandı!', 'success');
+                    // Modal kapatma
+                    const duyuruModal = bootstrap.Modal.getInstance(document.getElementById('duyuruEkleModal'));
+                    duyuruModal.hide();
+                });
+                // Toast Gösterme Fonksiyonu
+                function showToast(message, type = 'success') {
+                    // Toast elemanını güncelle
+                    const toastElement = document.getElementById('liveToast');
+                    const toastBody = toastElement.querySelector('.toast-body');
+                    const toastClasses = toastElement.classList;
+
+                    // Mesajı değiştir
+                    toastBody.textContent = message;
+
+                    // Tipine göre arka plan rengini değiştir
+                    toastClasses.remove('text-bg-success', 'text-bg-danger', 'text-bg-warning');
+                    toastClasses.add(`text-bg-${type}`);
+
+                    // Toast'u göster
+                    const toast = new bootstrap.Toast(toastElement);
+                    toast.show();
+                }
+                // Görsel önizleme işlemi 
+                const duyuruGorsel = document.getElementById('duyuruGorsel');
+                const previewImage = document.getElementById('previewImage');
+                duyuruGorsel.addEventListener('change', function (e) {
+                    const reader = new FileReader();
+                    reader.onload = function () {
+                        previewImage.src = reader.result;
+                    };
+                    reader.readAsDataURL(e.target.files[0]);
+                });
+
+                const urunGorsel = document.getElementById('urunGorsel');
+                const urunPreviewImage = document.getElementById('urunPreviewImage');
+                urunGorsel.addEventListener('change', function (e) {
+                    const reader = new FileReader();
+                    reader.onload = function () {
+                        urunPreviewImage.src = reader.result;
+                    };
+                    reader.readAsDataURL(e.target.files[0]);
+                });
+
+                // Düzenleme modalını açan fonksiyon
+                function openEditModal() {
+                    console.log("Düzenle modalı açıldı.");
+                }
+
+                // Silme onayı modalını açan fonksiyon
+                function openDeleteModal() {
+                    console.log("Silme modalı açıldı.");
+                }
+
+                // Düzenlemeyi kaydetme fonksiyonu
+                function saveEdit() {
+                    // Formdaki verileri al
+                    const title = document.getElementById("announcementTitle").value;
+                    const description = document.getElementById("announcementDescription").value;
+                    const date = document.getElementById("announcementDate").value;
+
+                    console.log(`Duyuru Düzenlendi: ${title}, ${description}, ${date}`);
+
+                    // Toast mesajı göster
+                    showToast("Duyuru başarıyla düzenlendi.");
+
+                    // Modalı kapat
+                    const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+                    editModal.hide();
+                }
+
+                // Duyuruyu silme fonksiyonu
+                function deleteAnnouncement() {
+                    console.log("Duyuru silindi.");
+
+                    // Toast mesajı göster
+                    showToast("Duyuru başarıyla silindi.");
+
+                    // Modalı kapat
+                    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+                    deleteModal.hide();
+                }
+
+            </script>
+</body>
+
+</html>
