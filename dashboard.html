@@ -110,10 +110,11 @@
             <div class="row gx-5 gy-4">
                 <div class="row g-4">
                     <!-- Kartlar -->
-                    
+
                     <!-- Toplam Üyeler Kartı -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm bg-primary text-white" data-bs-toggle="modal" data-bs-target="#uyelerModal" style="cursor:pointer;">
+                        <div class="card border-0 shadow-sm bg-primary text-white" data-bs-toggle="modal"
+                            data-bs-target="#uyelerModal" style="cursor:pointer;">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <i class="bi bi-person-circle fs-2 me-3"></i>
@@ -135,10 +136,11 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Toplam Siparişler Kartı -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm bg-success text-white" data-bs-toggle="modal" data-bs-target="#siparislerModal" style="cursor:pointer;">
+                        <div class="card border-0 shadow-sm bg-success text-white" data-bs-toggle="modal"
+                            data-bs-target="#siparislerModal" style="cursor:pointer;">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <i class="bi bi-basket fs-2 me-3"></i>
@@ -160,7 +162,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Site Girişleri Kartı -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card border-0 shadow-sm bg-danger text-white">
@@ -185,7 +187,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
             </div>
         </div>
@@ -326,6 +328,444 @@
                     </div>
 
                 </div>
+
+                <hr class="mt-5">
+
+                
+                <div class="row mt-5 rounded">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body" style="max-height: 500px; overflow-y: auto;">
+                                <h4 class="mb-4">Ürün Düzenleme</h4>
+                                <div class="p-2">
+                                    <div class="row align-items-center">
+
+                                        <!-- Örnek Ürünler -->
+                                        <!-- Ürün 1 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/2-aomori.jpg" class="img-fluid me-3" alt="Elmalı Pay"
+                                                style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Elmalı Pay</h5>
+                                                <p class="mb-0 text-muted small">Tam bir elmayı şurup ile tatlandırarak
+                                                    pay hamuruna sarıp pişiriyoruz. Doğal elma lezzetini hissedin.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+
+                                        </div>
+
+                                        <!-- Ürün 2 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/4-miyagi.jpg" class="img-fluid me-3"
+                                                alt="Zunda Ezmesiyle Mochi"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Zunda Ezmesiyle Mochi</h5>
+                                                <p class="mb-0 text-muted small">Mochi hamuruyla sarılmış lezzetli Zunda
+                                                    ezmesi. Kendine özgü taneli bir doku sunar.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 55₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 3 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/9-tochigi.jpg" class="img-fluid me-3"
+                                                alt="Azuki Ezmesiyle Sandviç Tatlı"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Azuki Ezmesiyle Sandviç Tatlı</h5>
+                                                <p class="mb-0 text-muted small">Fırınlanmış buğday hamurunun arasında
+                                                    Azuki fasulyesi ezmesiyle benzersiz bir lezzet.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 40₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 4 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/12-chiba.jpg" class="img-fluid me-3"
+                                                alt="Fıstıklı Monaka Tatlısı"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Fıstıklı Monaka Tatlısı</h5>
+                                                <p class="mb-0 text-muted small">100% Japon fıstığından yapılan çıtır
+                                                    Monaka tatlısı. Şirin şekliyle herkesin favorisi.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 64₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 5 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/15-yamanashi.jpg" class="img-fluid me-3"
+                                                alt="Kinako Mochi (Şekerli Soya Unu)"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Kinako Mochi (Şekerli Soya Unu)</h5>
+                                                <p class="mb-0 text-muted small">Kinako lezzetiyle tatlandırılmış mochi.
+                                                    Üzerine bol miktarda siyah şurup eklenerek servis edilir.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 80₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 6 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/30-wakayama.jpg" class="img-fluid me-3" alt="Kagerou Kek"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Kagerou Kek</h5>
+                                                <p class="mb-0 text-muted small">Yumuşak kek katmanları ve hafif
+                                                    kremasıyla ağızda eriyen enfes bir lezzet sunar.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 44₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 7 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/31-tottori.jpg" class="img-fluid me-3"
+                                                alt="Sütlü Manju (Beyaz Gül Sütüyle)"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Sütlü Manju (Beyaz Gül Sütüyle)</h5>
+                                                <p class="mb-0 text-muted small">Beyaz gül sütüyle yapılan yumuşak
+                                                    manju, sütlü ve pürüzsüz dokusuyla öne çıkıyor.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 120₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 8 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/33-okayama.jpg" class="img-fluid me-3"
+                                                alt="Kibi Dango (Yumuşak Pirinç Keki)"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Kibi Dango (Yumuşak Pirinç Keki)</h5>
+                                                <p class="mb-0 text-muted small">Yumuşak ve pürüzsüz dokusuyla kırmızı
+                                                    fasulye ezmesiyle harmanlanmış geleneksel bir tatlı.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 30₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 9 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/35-yamaguchi.jpg" class="img-fluid me-3"
+                                                alt="Ay Kek (Yumurta ve Kestane Dolgulu)"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Ay Kek (Yumurta ve Kestane Dolgulu)</h5>
+                                                <p class="mb-0 text-muted small">Yumuşak kek içerisinde yer alan süt
+                                                    kreması ve kestane parçalarıyla özel bir lezzet sunar.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 50₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 10 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/40-fukuoka.jpg" class="img-fluid me-3"
+                                                alt="Deniz Ürünlü Baharatlı Senbei"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Deniz Ürünlü Baharatlı Senbei</h5>
+                                                <p class="mb-0 text-muted small">Ahtapot, kalamar ve mentaiko ile
+                                                    yapılan hafif baharatlı çıtır senbei, her ısırıkta denizin tadını
+                                                    getiriyor.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 72₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 11 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Chocolate_Cherry_Pistachio_Cake.webp" class="img-fluid me-3"
+                                                alt="Çikolatalı Vişneli Fıstıklı Pasta"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Çikolatalı Vişneli Fıstıklı Pasta</h5>
+                                                <p class="mb-0 text-muted small">Zengin çikolata, parlak vişne ve yoğun
+                                                    fıstık tadını bir arada sunan, özel günler için mükemmel bir seçim!
+                                                </p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 109,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 12 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Raspberry-White-Chocolate-Cake.webp" class="img-fluid me-3"
+                                                alt="Ahududu ve Beyaz Çikolatalı Pasta"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Ahududu ve Beyaz Çikolatalı Pasta</h5>
+                                                <p class="mb-0 text-muted small">Hafif ve kabarık ahududu katmanlarıyla
+                                                    beyaz çikolatanın tatlı uyumu, özel davetler için zarif bir seçenek.
+                                                </p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 99,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 13 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Strawberry-Cake.jpg" class="img-fluid me-3" alt="Çilekli Pasta"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Çilekli Pasta</h5>
+                                                <p class="mb-0 text-muted small">Gerçek çileklerle hazırlanmış
+                                                    süngerimsi katmanlar, hafif tereyağlı krema ve çilekli bisküvi
+                                                    süslemesi ile büyüleyici!</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 105,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 14 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/ButtercreamBloomBouquetCake.webp" class="img-fluid me-3"
+                                                alt="Buttercream Çiçek Buketi Pasta"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Buttercream Çiçek Buketi Pasta</h5>
+                                                <p class="mb-0 text-muted small">Detaylı tereyağı kreması çiçekleriyle
+                                                    süslenmiş, zarif bir vanilya pastası. Fotoğraf çekmek isteyeceğiniz
+                                                    kadar güzel!</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 139,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 15 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/YoshiBirthdayCakex.webp" class="img-fluid me-3"
+                                                alt="Yoshi Temalı Pasta"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Yoshi Temalı Pasta</h5>
+                                                <p class="mb-0 text-muted small">Mario temalı bir doğum günü partisi
+                                                    için ideal! Yoshi ve diğer oyun unsurlarıyla dolu eğlenceli bir
+                                                    pasta.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 119,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+
+                                        <!-- Ürün 16 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/ChampagnePartyUnicornCake.webp" class="img-fluid me-3"
+                                                alt="Unicorn Parti Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Unicorn Parti Pastası</h5>
+                                                <p class="mb-0 text-muted small">Pembe tereyağı kreması, çikolata şişesi
+                                                    ve eğlenceli unicorn süslemeleriyle tam bir parti havası.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 119,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 17 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Vintage-Wedding-Cake.jpg" class="img-fluid me-3"
+                                                alt="Kişiye Özel Vintage Düğün Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Kişiye Özel Vintage Düğün Pastası</h5>
+                                                <p class="mb-0 text-muted small">Vintage tarzı ve özelleştirilebilir
+                                                    renk ve tat seçenekleriyle hem klasik hem de modern bir pasta.
+                                                    Geleneksel bir dokunuş arayan çiftler için ideal.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 229,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 18 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Rustic-Chic-Macarons-and-Roses-Vintage-Wedding-Cake.jpg" class="img-fluid me-3"
+                                                alt="Rustik Makaron ve Güller Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Rustik Makaron ve Güller Pastası</h5>
+                                                <p class="mb-0 text-muted small">Makaronlar, tereyağlı krema gülleri ve
+                                                    çikolata incilerle süslenmiş bu pasta, rustik bir zarafeti modern
+                                                    dokunuşlarla birleştiriyor.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 189,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 19 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Flamingo-Wedding-Cake.jpg" class="img-fluid me-3"
+                                                alt="Flamingo Düğün Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Flamingo Düğün Pastası</h5>
+                                                <p class="mb-0 text-muted small">Pembe tonlarda tereyağlı krema,
+                                                    çikolata tüyler ve zarif detaylarıyla göz alıcı bir pasta. Romantik
+                                                    bir merkez parça isteyen çiftler için mükemmel bir seçim.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 189,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 20 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/PinkWatercolourCascadeWeddingCake.jpg" class="img-fluid me-3"
+                                                alt="Pembe Su Rengi Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Pembe Su Rengi Pastası</h5>
+                                                <p class="mb-0 text-muted small">Altın karamel ganaj damlamaları ve
+                                                    pembe tereyağlı krema ile süslenmiş bu pasta, modern bir zarafet ve
+                                                    romantizm sunuyor.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 219,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 21 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Vintage-Lace-Buttercream-Brocade-Wedding-Cake.jpg" class="img-fluid me-3"
+                                                alt="Vintage Dantel Tereyağlı Krema Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Vintage Dantel Tereyağlı Krema Pastası</h5>
+                                                <p class="mb-0 text-muted small">Zarif dantel detayları ve hafif
+                                                    tatlılığıyla hem lezzetli hem de nostaljik bir pasta. Klasik bir
+                                                    dokunuş arayanlar için ideal.</p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 239,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+                                        <!-- Ürün 22 -->
+                                        <div class="urun d-flex align-items-center mb-3">
+                                            <img src="img/Ivory-Dreams-Wedding-Cake.webp" class="img-fluid me-3"
+                                                alt="Fildişi Rüyası Pastası"
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-1">Fildişi Rüyası Pastası</h5>
+                                                <p class="mb-0 text-muted small">Altın yapraklı makaronlar ve tereyağlı
+                                                    krema detaylarıyla tasarlanmış bu pasta, sade ama zarif bir seçenek.
+                                                </p>
+                                                <p class="text-muted small mb-0"><strong>Fiyat:</strong> 239,90₺</p>
+                                            </div>
+                                            <button class="btn btn-sm btn-primary ms-2 me-2" data-bs-toggle="modal"
+                                                data-bs-target="#editProductModal">Düzenle</button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#productDeleteModal"
+                                                onclick="openDeleteModal()">Sil</button>
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="mt-5">
                 <!-- Duyuru Düzenleme -->
                 <div class="row mt-5 rounded">
                     <div class="col-12">
@@ -339,7 +779,7 @@
                                         <div class="duyuru d-flex align-items-center mb-3">
                                             <img src="img/tatli.jpeg" class="img-fluid me-3"
                                                 alt="Tatlı Günler Kampanyası"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
                                             <div class="flex-grow-1">
                                                 <h5 class="mb-1">Tatlı Günler Kampanyası</h5>
                                                 <p class="mb-0 text-muted small">
@@ -361,7 +801,7 @@
                                         <!-- Duyuru 9 -->
                                         <div class="duyuru d-flex align-items-center mb-3">
                                             <img src="img/yeni_sube.jpg" class="img-fluid me-3" alt="Yeni Şube Açılışı"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
                                             <div class="flex-grow-1">
                                                 <h5 class="mb-1">Yeni Şube Açılışı</h5>
                                                 <p class="mb-0 text-muted small">
@@ -382,7 +822,7 @@
                                         <!-- Duyuru 8 -->
                                         <div class="duyuru d-flex align-items-center mb-3">
                                             <img src="img/kis_menu.jpg" class="img-fluid me-3" alt="Kış Menü Lansmanı"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
                                             <div class="flex-grow-1">
                                                 <h5 class="mb-1">Kış Menü Lansmanı</h5>
                                                 <p class="mb-0 text-muted small">
@@ -404,7 +844,7 @@
                                         <div class="duyuru d-flex align-items-center mb-3">
                                             <img src="img/hafta_sonu.jpeg" class="img-fluid me-3"
                                                 alt="Hafta Sonu İkramı"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
                                             <div class="flex-grow-1">
                                                 <h5 class="mb-1">Hafta Sonu İkramı</h5>
                                                 <p class="mb-0 text-muted small">
@@ -426,7 +866,7 @@
                                         <!-- Duyuru 6 -->
                                         <div class="duyuru d-flex align-items-center mb-3">
                                             <img src="img/yeni_yil.jpeg" class="img-fluid me-3" alt="Yeni Yıl Çekilişi"
-                                                style="width: 100px; height: 100px; object-fit: cover;">
+                                                 style="width: 100px; height: 100px; object-fit: cover; min-width: 100px; min-height: 100px;">
                                             <div class="flex-grow-1">
                                                 <h5 class="mb-1">Yeni Yıl Çekilişi</h5>
                                                 <p class="mb-0 text-muted small">
@@ -562,6 +1002,97 @@
                         </div>
                     </div>
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+                <!-- Ürün Düzenleme Modal -->
+                <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editProductModalLabel">Ürün Düzenleme</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Kapat"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <!-- Ürün Görseli -->
+                                    <div class="mb-3 text-center">
+                                        <img id="productImagePreview" src="img/2-aomori.jpg" alt="Ürün Görseli"
+                                            class="img-fluid rounded mb-3"
+                                            style="width: 150px; height: 150px; object-fit: cover;">
+                                        <input type="file" class="form-control" id="productImage"
+                                            onchange="previewImageProduct(event)">
+                                    </div>
+
+                                    <!-- Ürün Adı -->
+                                    <div class="mb-3">
+                                        <label for="productName" class="form-label">Ürün Adı</label>
+                                        <input type="text" class="form-control" id="productName"
+                                            placeholder="Ürün adı girin" value="Elmalı Pay">
+                                    </div>
+
+                                    <!-- Ürün Açıklaması -->
+                                    <div class="mb-3">
+                                        <label for="productDesc" class="form-label">Ürün Açıklaması</label>
+                                        <textarea class="form-control" id="productDesc" rows="3"
+                                            placeholder="Ürün açıklaması girin">Tam bir elmayı şurup ile tatlandırarak pay hamuruna sarıp pişiriyoruz. Doğal elma lezzetini hissedin.</textarea>
+                                    </div>
+
+                                    <!-- Ürün Fiyatı -->
+                                    <div class="mb-3">
+                                        <label for="productPrice" class="form-label">Fiyat</label>
+                                        <input type="number" class="form-control" id="productPrice"
+                                            placeholder="Fiyat girin" value="90">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                    onclick="saveProductEdit()">Kaydet</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Ürün Sil Modal -->
+                <div class="modal fade" id="productDeleteModal" tabindex="-1" aria-labelledby="productDeleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productDeleteModal">Ürünü Sil</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bu ürünü silmek istediğinize emin misiniz?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                    onclick="deleteProduct()">Evet,
+                                    Sil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
                 <!-- Grafik Alanı -->
                 <div class="row mt-5">
                     <div class="col-12">
@@ -1279,6 +1810,8 @@
                 }
             }
         });
+
+
         // Ürün Ekleme Formu
         document.querySelector('#urunEkleModal form').addEventListener('submit', function (e) {
             e.preventDefault(); // Formun varsayılan submit işlemini durdurur
@@ -1373,6 +1906,39 @@
             deleteModal.hide();
         }
 
+        // Düzenlemeyi kaydetme fonksiyonu
+        function saveProductEdit() {
+            // Toast mesajı göster
+            showToast("Ürün başarıyla düzenlendi.");
+
+            // Modalı kapat
+            const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+            editModal.hide();
+        }
+
+        function deleteProduct() {
+            console.log("Ürün silindi.");
+
+            // Toast mesajı göster
+            showToast("Ürün başarıyla silindi.");
+
+            // Modalı kapat
+            const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+            deleteModal.hide();
+        }
+
+
+    </script>
+
+    <script>
+        function previewImageProduct(event) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                const output = document.getElementById('productImagePreview');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
     </script>
 </body>
 
