@@ -155,12 +155,12 @@
                                     <div class="d-flex">
                                         <div class="d-flex align-items-center">
                                             <button class="btn btn-outline-primary" id="decrease"
-                                                onclick="adjustQuantity(-1)">-</button>
-                                            <input type="number" id="product-quantity"
+                                                onclick="adjustQuantity2(-1)">-</button>
+                                            <input type="number" id="product-quantity-2"
                                                 class="form-control mx-2 bg-primary text-light" value="3" min="1"
                                                 style="width: 60px;" readonly>
                                             <button class="btn btn-outline-primary" id="increase"
-                                                onclick="adjustQuantity(1)">+</button>
+                                                onclick="adjustQuantity2(1)">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -181,12 +181,12 @@
                                     <div class="d-flex">
                                         <div class="d-flex align-items-center">
                                             <button class="btn btn-outline-primary" id="decrease"
-                                                onclick="adjustQuantity(-1)">-</button>
-                                            <input type="number" id="product-quantity"
+                                                onclick="adjustQuantity3(-1)">-</button>
+                                            <input type="number" id="product-quantity-3"
                                                 class="form-control mx-2 bg-primary text-light" value="1" min="1"
                                                 style="width: 60px;" readonly>
                                             <button class="btn btn-outline-primary" id="increase"
-                                                onclick="adjustQuantity(1)">+</button>
+                                                onclick="adjustQuantity3(1)">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -283,6 +283,28 @@
             // Miktarın 1'in altına düşmesini engelle
             if (newQuantity >= 1) {
                 quantityInput.value = newQuantity;
+            }
+
+        }
+        function adjustQuantity2(amount) {
+            let quantityInput2 = document.getElementById('product-quantity-2');
+            let currentQuantity2 = parseInt(quantityInput2.value);
+            let newQuantity2 = currentQuantity2 + amount;
+
+            // Miktarın 1'in altına düşmesini engelle
+            if (newQuantity2 >= 1) {
+                quantityInput2.value = newQuantity2;
+            }
+
+        }
+        function adjustQuantity3(amount) {
+            let quantityInput3 = document.getElementById('product-quantity-3');
+            let currentQuantity3 = parseInt(quantityInput3.value);
+            let newQuantity3 = currentQuantity3 + amount;
+
+            // Miktarın 1'in altına düşmesini engelle
+            if (newQuantity3 >= 1) {
+                quantityInput3.value = newQuantity3;
             }
 
         }

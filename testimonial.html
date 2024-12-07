@@ -103,185 +103,207 @@
 </nav>
 <!-- Navbar End -->
 
-<!-- Sepet Modal -->
-<div class="modal fade" id="sepetModal" tabindex="-1" aria-labelledby="sepetModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="sepetModalLabel">Sepetiniz</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-        </div>
-        <div class="modal-body">
-            <div class="container">
-                <!-- Ürün Listesi -->
-                <div class="row align-items-center mb-3">
-                    <div class="col-2">
-                        <img src="img/12-chiba.jpg" alt="Ürün 1" style="width: 100px; height: 100px; object-fit: cover; " class="img-fluid">
-                    </div>
-                    <div class="col-4">Fıstıklı Monaka Tatlısı</div>
-                    <div class="col-3">
-                        <div class="input-group">
-                            <div class="d-flex">
-                                <div class="d-flex align-items-center">
-                                    <button class="btn btn-outline-primary" id="decrease"
-                                        onclick="adjustQuantity(-1)">-</button>
-                                    <input type="number" id="product-quantity"
-                                        class="form-control mx-2 bg-primary text-light" value="2" min="1"
-                                        style="width: 60px;" readonly>
-                                    <button class="btn btn-outline-primary" id="increase"
-                                        onclick="adjustQuantity(1)">+</button>
+ <!-- Sepet Modal -->
+ <div class="modal fade" id="sepetModal" tabindex="-1" aria-labelledby="sepetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sepetModalLabel">Sepetiniz</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <!-- Ürün Listesi -->
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <img src="img/12-chiba.jpg" alt="Ürün 1" style="width: 100px; height: 100px; object-fit: cover; " class="img-fluid">
+                        </div>
+                        <div class="col-4">Fıstıklı Monaka Tatlısı</div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-primary" id="decrease"
+                                            onclick="adjustQuantity(-1)">-</button>
+                                        <input type="number" id="product-quantity"
+                                            class="form-control mx-2 bg-primary text-light" value="2" min="1"
+                                            style="width: 60px;" readonly>
+                                        <button class="btn btn-outline-primary" id="increase"
+                                            onclick="adjustQuantity(1)">+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-2">
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-bag-x-fill"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-danger btn-sm">
-                            <i class="bi bi-bag-x-fill"></i>
-                        </button>
-                    </div>
-                </div>
-                <!-- Ürün Listesi -->
-                <div class="row align-items-center mb-3">
-                    <div class="col-2">
-                        <img src="img/33-okayama.jpg" alt="Ürün 1"  style="width: 100px; height: 100px; object-fit: cover;" class="img-fluid">
-                    </div>
-                    <div class="col-4">Kibi Dango (Yumuşak Pirinç Keki)</div>
-                    <div class="col-3">
-                        <div class="input-group">
-                            <div class="d-flex">
-                                <div class="d-flex align-items-center">
-                                    <button class="btn btn-outline-primary" id="decrease"
-                                        onclick="adjustQuantity(-1)">-</button>
-                                    <input type="number" id="product-quantity"
-                                        class="form-control mx-2 bg-primary text-light" value="3" min="1"
-                                        style="width: 60px;" readonly>
-                                    <button class="btn btn-outline-primary" id="increase"
-                                        onclick="adjustQuantity(1)">+</button>
+                    <!-- Ürün Listesi -->
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <img src="img/33-okayama.jpg" alt="Ürün 1"  style="width: 100px; height: 100px; object-fit: cover;" class="img-fluid">
+                        </div>
+                        <div class="col-4">Kibi Dango (Yumuşak Pirinç Keki)</div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-primary" id="decrease"
+                                            onclick="adjustQuantity2(-1)">-</button>
+                                        <input type="number" id="product-quantity-2"
+                                            class="form-control mx-2 bg-primary text-light" value="3" min="1"
+                                            style="width: 60px;" readonly>
+                                        <button class="btn btn-outline-primary" id="increase"
+                                            onclick="adjustQuantity2(1)">+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <button class="btn btn-danger btn-sm">
-                            <i class="bi bi-bag-x-fill"></i>
-                        </button>
-                    </div>
-                </div><!-- Ürün Listesi -->
-                <div class="row align-items-center mb-3">
-                    <div class="col-2">
-                        <img src="img/Strawberry-Cake.jpg" alt="Ürün 1" style="width: 100px; height: 100px; object-fit: cover;" class="img-fluid">
-                    </div>
-                    <div class="col-4">Çilekli Pasta</div>
-                    <div class="col-3">
-                        <div class="input-group">
-                            <div class="d-flex">
-                                <div class="d-flex align-items-center">
-                                    <button class="btn btn-outline-primary" id="decrease"
-                                        onclick="adjustQuantity(-1)">-</button>
-                                    <input type="number" id="product-quantity"
-                                        class="form-control mx-2 bg-primary text-light" value="1" min="1"
-                                        style="width: 60px;" readonly>
-                                    <button class="btn btn-outline-primary" id="increase"
-                                        onclick="adjustQuantity(1)">+</button>
+                        <div class="col-2">
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-bag-x-fill"></i>
+                            </button>
+                        </div>
+                    </div><!-- Ürün Listesi -->
+                    <div class="row align-items-center mb-3">
+                        <div class="col-2">
+                            <img src="img/Strawberry-Cake.jpg" alt="Ürün 1" style="width: 100px; height: 100px; object-fit: cover;" class="img-fluid">
+                        </div>
+                        <div class="col-4">Çilekli Pasta</div>
+                        <div class="col-3">
+                            <div class="input-group">
+                                <div class="d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn btn-outline-primary" id="decrease"
+                                            onclick="adjustQuantity3(-1)">-</button>
+                                        <input type="number" id="product-quantity-3"
+                                            class="form-control mx-2 bg-primary text-light" value="1" min="1"
+                                            style="width: 60px;" readonly>
+                                        <button class="btn btn-outline-primary" id="increase"
+                                            onclick="adjustQuantity3(1)">+</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <button class="btn btn-danger btn-sm">
-                            <i class="bi bi-bag-x-fill"></i>
-                        </button>
+                        <div class="col-2">
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-bag-x-fill"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#odemeBilgiModal"
-                data-bs-dismiss="modal">
-                <i class="bi bi-bag-check-fill"></i> Sepeti Onayla
-            </button>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#odemeBilgiModal"
+                    data-bs-dismiss="modal">
+                    <i class="bi bi-bag-check-fill"></i> Sepeti Onayla
+                </button>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Ödeme Bilgisi Modal -->
 <div class="modal fade" id="odemeBilgiModal" tabindex="-1" aria-labelledby="odemeBilgiModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-md">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="odemeBilgiModalLabel">Ödeme Bilgileri</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                    <label for="cardName" class="form-label">Kart Sahibi Adı</label>
-                    <input type="text" class="form-control" id="cardName" placeholder="Ad Soyad">
-                </div>
-                <div class="mb-3">
-                    <label for="cardNumber" class="form-label">Kart Numarası</label>
-                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9101 1121">
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="expiryDate" class="form-label">Son Kullanma Tarihi</label>
-                        <input type="text" class="form-control" id="expiryDate" placeholder="AA/YY">
+    aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="odemeBilgiModalLabel">Ödeme Bilgileri</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="cardName" class="form-label">Kart Sahibi Adı</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="Ad Soyad">
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control" id="cvv" placeholder="123">
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Kart Numarası</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9101 1121">
                     </div>
-                </div>
-                <div class="mb-3">
-                    <label for="billingAddress" class="form-label">Fatura Adresi</label>
-                    <textarea class="form-control" id="billingAddress" rows="2"
-                        placeholder="Adresinizi girin"></textarea>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tamamModal"
-                data-bs-dismiss="modal">
-                Ödemeyi Onayla
-            </button>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="expiryDate" class="form-label">Son Kullanma Tarihi</label>
+                            <input type="text" class="form-control" id="expiryDate" placeholder="AA/YY">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="billingAddress" class="form-label">Fatura Adresi</label>
+                        <textarea class="form-control" id="billingAddress" rows="2"
+                            placeholder="Adresinizi girin"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tamamModal"
+                    data-bs-dismiss="modal">
+                    Ödemeyi Onayla
+                </button>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- İşlem Tamamlandı Modal -->
 <div class="modal fade" id="tamamModal" tabindex="-1" aria-labelledby="tamamModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-sm">
-    <div class="modal-content">
-        <div class="modal-body text-center">
-            <h5>İşlem Tamamlandı</h5>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h5>İşlem Tamamlandı</h5>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Modalların Kendiliğinden Kapanması -->
 <script>
-const tamamModal = document.getElementById('tamamModal');
-tamamModal.addEventListener('shown.bs.modal', () => {
-    setTimeout(() => {
-        const modalInstance = bootstrap.Modal.getInstance(tamamModal);
-        modalInstance.hide();
-    }, 2000); // 2 saniye sonra kapanır
-});
-function adjustQuantity(amount) {
-    let quantityInput = document.getElementById('product-quantity');
-    let currentQuantity = parseInt(quantityInput.value);
-    let newQuantity = currentQuantity + amount;
+    const tamamModal = document.getElementById('tamamModal');
+    tamamModal.addEventListener('shown.bs.modal', () => {
+        setTimeout(() => {
+            const modalInstance = bootstrap.Modal.getInstance(tamamModal);
+            modalInstance.hide();
+        }, 2000); // 2 saniye sonra kapanır
+    });
+    function adjustQuantity(amount) {
+        let quantityInput = document.getElementById('product-quantity');
+        let currentQuantity = parseInt(quantityInput.value);
+        let newQuantity = currentQuantity + amount;
 
-    // Miktarın 1'in altına düşmesini engelle
-    if (newQuantity >= 1) {
-        quantityInput.value = newQuantity;
+        // Miktarın 1'in altına düşmesini engelle
+        if (newQuantity >= 1) {
+            quantityInput.value = newQuantity;
+        }
+
     }
+    function adjustQuantity2(amount) {
+        let quantityInput2 = document.getElementById('product-quantity-2');
+        let currentQuantity2 = parseInt(quantityInput2.value);
+        let newQuantity2 = currentQuantity2 + amount;
 
-}
+        // Miktarın 1'in altına düşmesini engelle
+        if (newQuantity2 >= 1) {
+            quantityInput2.value = newQuantity2;
+        }
+
+    }
+    function adjustQuantity3(amount) {
+        let quantityInput3 = document.getElementById('product-quantity-3');
+        let currentQuantity3 = parseInt(quantityInput3.value);
+        let newQuantity3 = currentQuantity3 + amount;
+
+        // Miktarın 1'in altına düşmesini engelle
+        if (newQuantity3 >= 1) {
+            quantityInput3.value = newQuantity3;
+        }
+
+    }
 </script>
 
 <!-- Authentication Modal -->

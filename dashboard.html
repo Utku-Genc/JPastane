@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Toastr CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
     <!-- Toastr JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Google Web Fonts -->
@@ -67,7 +68,7 @@
     </div>
     <div class="container-fluid px-0 d-lg-block d-lg-none">
         <div class="row gx-0">
-    
+
             <div class="col-lg-4 text-center bg-primary border-inner py-3">
                 <div class="d-inline-flex align-items-center justify-content-center">
                     <a href="index.html" class="navbar-brand">
@@ -77,7 +78,7 @@
                     </a>
                 </div>
             </div>
-    
+
             <!-- Yönetim ve Yönetici Div'leri Yan Yana ve Ekranı Dolduracak Şekilde Yayılacak -->
             <div class="col-lg-8 d-flex px-0">
                 <div class="col-6 d-flex text-center bg-secondary py-3">
@@ -99,42 +100,92 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
     </div>
     <!-- Topbar End -->
     <!-- Dashboard Content Start -->
-    <div class="container-fluid bg-img  mb-5">
+    <div class="container-fluid bg-img mb-5">
         <div class="container py-5">
-            <div class="row gx-5 gy-4 ">
+            <div class="row gx-5 gy-4">
                 <div class="row g-4">
                     <!-- Kartlar -->
+                    
+                    <!-- Toplam Üyeler Kartı -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm bg-primary text-white" data-bs-toggle="modal"
-                            data-bs-target="#uyelerModal" style="cursor:pointer;">
+                        <div class="card border-0 shadow-sm bg-primary text-white" data-bs-toggle="modal" data-bs-target="#uyelerModal" style="cursor:pointer;">
                             <div class="card-body">
-                                <h5 class="text-light">Toplam Üyeler</h5>
-                                <h2 class="text-light">83.540</h2>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-person-circle fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="text-light">Toplam Üyeler</h5>
+                                        <h2 class="text-light">83.540</h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <div class="me-4">
+                                        <h6>Aylık</h6>
+                                        <p>2.300</p>
+                                    </div>
+                                    <div>
+                                        <h6>Tüm Zamanlar</h6>
+                                        <p>83.540</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+    
+                    <!-- Toplam Siparişler Kartı -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card border-0 shadow-sm bg-success text-white" data-bs-toggle="modal"
-                            data-bs-target="#siparislerModal" style="cursor:pointer;">
+                        <div class="card border-0 shadow-sm bg-success text-white" data-bs-toggle="modal" data-bs-target="#siparislerModal" style="cursor:pointer;">
                             <div class="card-body">
-                                <h5 class="text-light">Toplam Siparişler</h5>
-                                <h2 class="text-light">284.917</h2>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-basket fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="text-light">Toplam Siparişler</h5>
+                                        <h2 class="text-light">284.917</h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <div class="me-4">
+                                        <h6>Aylık</h6>
+                                        <p>10.000</p>
+                                    </div>
+                                    <div>
+                                        <h6>Tüm Zamanlar</h6>
+                                        <p>284.917</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+    
+                    <!-- Site Girişleri Kartı -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card border-0 shadow-sm bg-danger text-white">
                             <div class="card-body">
-                                <h5 class="text-light">Site Girişleri (Aylık)</h5>
-                                <h2 class="text-light">7.342</h2>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-door-open fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="text-light">Site Girişleri (Aylık)</h5>
+                                        <h2 class="text-light">7.342</h2>
+                                    </div>
+                                </div>
+                                <div class="d-flex mt-3">
+                                    <div class="me-4">
+                                        <h6>Aylık</h6>
+                                        <p>7.342</p>
+                                    </div>
+                                    <div>
+                                        <h6>Tüm Zamanlar</h6>
+                                        <p>4.987.203</p> <!-- Bu veriyi ihtiyaca göre güncelleyebilirsiniz -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+    
                 </div>
             </div>
         </div>
@@ -268,8 +319,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        <a class="bg-primary btn btn-primary w-100 mt-3" style="height: 50px;border-radius: 10px;" data-bs-toggle="modal"
-                            data-bs-target="#siparislerModal" style="cursor:pointer;">
+                        <a class="bg-primary btn btn-primary w-100 mt-3" style="height: 50px;border-radius: 10px;"
+                            data-bs-toggle="modal" data-bs-target="#siparislerModal" style="cursor:pointer;">
                             Tüm Şiparişler
                         </a>
                     </div>
@@ -1036,141 +1087,293 @@
                 </div>
 
             </div>
-            <!-- Dashboard Content End -->
-            <!-- Chart.js -->
+
+            <!-- Grafik Alanı -->
+            <div class="row mt-5">
+                <!-- En Çok Satılan Ürünler Grafik Kartı -->
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="mb-4">En Çok Satılan Ürünler</h4>
+                            <canvas id="topSellingChart" width="600" height="600"></canvas>
+                            <!-- Genişlik ve Yükseklik artırıldı -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- En Çok Ziyaret Edilen Sayfalar Grafik Kartı -->
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="mb-4">En Çok Ziyaret Edilen Sayfalar</h4>
+                            <canvas id="pageViewsChart" width="600" height="600"></canvas>
+                            <!-- Genişlik ve Yükseklik artırıldı -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart.js Kütüphanesini Yükle -->
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
             <script>
-                // Grafik Verileri
-                const ctx = document.getElementById('dataChart').getContext('2d');
-                const dataChart = new Chart(ctx, {
-                    type: 'line', // Çizgi grafik türü
-                    data: {
-                        labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'], // Aylar
-                        datasets: [
-                            {
-                                label: 'Siparişler',
-                                data: [300, 400, 350, 450, 500, 600], // Sipariş verileri
-                                borderColor: 'rgba(75, 192, 192, 1)',
-                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                                fill: true
-                            },
-                            {
-                                label: 'Site Girişleri',
-                                data: [800, 900, 850, 1000, 1100, 1200], // Site giriş verileri
-                                borderColor: 'rgba(255, 99, 132, 1)',
-                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                                fill: true
-                            }
-                        ]
-                    },
+                // En Çok Satılan Ürünler Verisi
+                const topSellingData = {
+                    labels: [
+                        "Elmalı Pay", "Fıstıklı Monaka Tatlısı", "Ay Kek (Yumurta ve Kestane Dolgulu)",
+                        "Zunda Ezmesiyle Mochi", "Azuki Ezmesiyle Sandviç Tatlı", "Kinako Mochi",
+                        "Kagerou Kek", "Sütlü Manju", "Kibi Dango", "Deniz Ürünlü Baharatlı Senbei"
+                    ],
+                    datasets: [{
+                        data: [500, 400, 350, 450, 300, 600, 550, 700, 150, 600], // Tüm ürünlerin satışları
+                        backgroundColor: [
+                            'rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 159, 64)',
+                            'rgb(75, 192, 192)', 'rgb(153, 102, 255)', 'rgb(255, 205, 86)',
+                            'rgb(201, 203, 207)', 'rgb(255, 99, 132)', 'rgb(54, 162, 235)',
+                            'rgb(255, 159, 64)'
+                        ], // Yeni renk tonları
+                        borderWidth: 1
+                    }]
+                };
+
+                const topSellingConfig = {
+                    type: 'doughnut',
+                    data: topSellingData,
                     options: {
                         responsive: true,
                         plugins: {
                             legend: {
                                 position: 'top',
                             },
-                            title: {
-                                display: true,
-                                text: 'Aylık Veriler'
+                            tooltip: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        const value = tooltipItem.raw;
+                                        const percentage = ((value / 4600) * 100).toFixed(1); // Toplam satışa göre yüzde hesaplanır
+                                        return tooltipItem.label + ': ' + value + ' Sipariş (' + percentage + '%)';
+                                    }
+                                }
                             }
                         }
                     }
-                });
-                // Ürün Ekleme Formu
-                document.querySelector('#urunEkleModal form').addEventListener('submit', function (e) {
-                    e.preventDefault(); // Formun varsayılan submit işlemini durdurur
-                    showToast('Ürün başarıyla eklendi!', 'success');
-                    // Modal kapatma
-                    const urunModal = bootstrap.Modal.getInstance(document.getElementById('urunEkleModal'));
-                    urunModal.hide();
-                });
-                // Duyuru Ekleme Formu
-                document.querySelector('#duyuruEkleModal form').addEventListener('submit', function (e) {
-                    e.preventDefault(); // Formun varsayılan submit işlemini durdurur
-                    showToast('Duyuru başarıyla yayınlandı!', 'success');
-                    // Modal kapatma
-                    const duyuruModal = bootstrap.Modal.getInstance(document.getElementById('duyuruEkleModal'));
-                    duyuruModal.hide();
-                });
-                // Toast Gösterme Fonksiyonu
-                function showToast(message, type = 'success') {
-                    // Toast elemanını güncelle
-                    const toastElement = document.getElementById('liveToast');
-                    const toastBody = toastElement.querySelector('.toast-body');
-                    const toastClasses = toastElement.classList;
+                };
 
-                    // Mesajı değiştir
-                    toastBody.textContent = message;
+                // En Çok Ziyaret Edilen Sayfalar Verisi
+                const pageViewsData = {
+                    labels: ["Ana Sayfa", "Biz", "Menü ve Fiyatlar", "Usta Şefler", "Diğer Sayfalar", "İletişim", "Duyurular", "Kayıt / Giriş", "Sepet"],
+                    datasets: [{
+                        data: [1000, 900, 1500, 750, 600, 1250, 500, 450, 400], // Sayfa ziyaretleri
+                        backgroundColor: [
+                            'rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 159, 64)',
+                            'rgb(75, 192, 192)', 'rgb(153, 102, 255)', 'rgb(255, 205, 86)',
+                            'rgb(201, 203, 207)', 'rgb(255, 99, 132)', 'rgb(54, 162, 235)'
+                        ],
+                        borderWidth: 1
+                    }]
+                };
 
-                    // Tipine göre arka plan rengini değiştir
-                    toastClasses.remove('text-bg-success', 'text-bg-danger', 'text-bg-warning');
-                    toastClasses.add(`text-bg-${type}`);
+                const pageViewsConfig = {
+                    type: 'doughnut',
+                    data: pageViewsData,
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        const value = tooltipItem.raw;
+                                        const total = pageViewsData.datasets[0].data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((value / total) * 100).toFixed(1);
+                                        return tooltipItem.label + ': ' + value + ' Görüntüleme (' + percentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
 
-                    // Toast'u göster
-                    const toast = new bootstrap.Toast(toastElement);
-                    toast.show();
-                }
-                // Görsel önizleme işlemi 
-                const duyuruGorsel = document.getElementById('duyuruGorsel');
-                const previewImage = document.getElementById('previewImage');
-                duyuruGorsel.addEventListener('change', function (e) {
-                    const reader = new FileReader();
-                    reader.onload = function () {
-                        previewImage.src = reader.result;
-                    };
-                    reader.readAsDataURL(e.target.files[0]);
-                });
-
-                const urunGorsel = document.getElementById('urunGorsel');
-                const urunPreviewImage = document.getElementById('urunPreviewImage');
-                urunGorsel.addEventListener('change', function (e) {
-                    const reader = new FileReader();
-                    reader.onload = function () {
-                        urunPreviewImage.src = reader.result;
-                    };
-                    reader.readAsDataURL(e.target.files[0]);
-                });
-
-                // Düzenleme modalını açan fonksiyon
-                function openEditModal() {
-                    console.log("Düzenle modalı açıldı.");
-                }
-
-                // Silme onayı modalını açan fonksiyon
-                function openDeleteModal() {
-                    console.log("Silme modalı açıldı.");
-                }
-
-                // Düzenlemeyi kaydetme fonksiyonu
-                function saveEdit() {
-                    // Formdaki verileri al
-                    const title = document.getElementById("announcementTitle").value;
-                    const description = document.getElementById("announcementDescription").value;
-                    const date = document.getElementById("announcementDate").value;
-
-                    console.log(`Duyuru Düzenlendi: ${title}, ${description}, ${date}`);
-
-                    // Toast mesajı göster
-                    showToast("Duyuru başarıyla düzenlendi.");
-
-                    // Modalı kapat
-                    const editModal = new bootstrap.Modal(document.getElementById("editModal"));
-                    editModal.hide();
-                }
-
-                // Duyuruyu silme fonksiyonu
-                function deleteAnnouncement() {
-                    console.log("Duyuru silindi.");
-
-                    // Toast mesajı göster
-                    showToast("Duyuru başarıyla silindi.");
-
-                    // Modalı kapat
-                    const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
-                    deleteModal.hide();
-                }
-
+                // Grafiklerin Yüklenmesi
+                const topSellingChart = new Chart(document.getElementById('topSellingChart'), topSellingConfig);
+                const pageViewsChart = new Chart(document.getElementById('pageViewsChart'), pageViewsConfig);
             </script>
+
+            <!-- Grafik Alanı Sonu -->
+
+            <style>
+                /* Ekran genişliği küçüldüğünde grafikleri alt alta diz */
+                @media (max-width: 768px) {
+                    .row>.col-12 {
+                        width: 100% !important;
+                        /* Ekran küçüldüğünde her iki kart da %100 genişlikte olsun */
+                    }
+
+                    .row {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <!-- Dashboard Content End -->
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Grafik Verileri
+        const ctx = document.getElementById('dataChart').getContext('2d');
+        const dataChart = new Chart(ctx, {
+            type: 'line', // Çizgi grafik türü
+            data: {
+                labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'], // Aylar
+                datasets: [
+                    {
+                        label: 'Siparişler',
+                        data: [313, 531, 351, 450, 743, 827], // Sipariş verileri
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true
+                    },
+                    {
+                        label: 'Site Girişleri',
+                        data: [800, 900, 850, 1000, 1100, 1800], // Site giriş verileri
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: true
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Aylık Veriler'
+                    }
+                }
+            }
+        });
+        // Ürün Ekleme Formu
+        document.querySelector('#urunEkleModal form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Formun varsayılan submit işlemini durdurur
+            showToast('Ürün başarıyla eklendi!', 'success');
+            // Modal kapatma
+            const urunModal = bootstrap.Modal.getInstance(document.getElementById('urunEkleModal'));
+            urunModal.hide();
+        });
+        // Duyuru Ekleme Formu
+        document.querySelector('#duyuruEkleModal form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Formun varsayılan submit işlemini durdurur
+            showToast('Duyuru başarıyla yayınlandı!', 'success');
+            // Modal kapatma
+            const duyuruModal = bootstrap.Modal.getInstance(document.getElementById('duyuruEkleModal'));
+            duyuruModal.hide();
+        });
+        // Toast Gösterme Fonksiyonu
+        function showToast(message, type = 'success') {
+            // Toast elemanını güncelle
+            const toastElement = document.getElementById('liveToast');
+            const toastBody = toastElement.querySelector('.toast-body');
+            const toastClasses = toastElement.classList;
+
+            // Mesajı değiştir
+            toastBody.textContent = message;
+
+            // Tipine göre arka plan rengini değiştir
+            toastClasses.remove('text-bg-success', 'text-bg-danger', 'text-bg-warning');
+            toastClasses.add(`text-bg-${type}`);
+
+            // Toast'u göster
+            const toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+        // Görsel önizleme işlemi 
+        const duyuruGorsel = document.getElementById('duyuruGorsel');
+        const previewImage = document.getElementById('previewImage');
+        duyuruGorsel.addEventListener('change', function (e) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                previewImage.src = reader.result;
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        });
+
+        const urunGorsel = document.getElementById('urunGorsel');
+        const urunPreviewImage = document.getElementById('urunPreviewImage');
+        urunGorsel.addEventListener('change', function (e) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                urunPreviewImage.src = reader.result;
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        });
+
+        // Düzenleme modalını açan fonksiyon
+        function openEditModal() {
+            console.log("Düzenle modalı açıldı.");
+        }
+
+        // Silme onayı modalını açan fonksiyon
+        function openDeleteModal() {
+            console.log("Silme modalı açıldı.");
+        }
+
+        // Düzenlemeyi kaydetme fonksiyonu
+        function saveEdit() {
+            // Formdaki verileri al
+            const title = document.getElementById("announcementTitle").value;
+            const description = document.getElementById("announcementDescription").value;
+            const date = document.getElementById("announcementDate").value;
+
+            console.log(`Duyuru Düzenlendi: ${title}, ${description}, ${date}`);
+
+            // Toast mesajı göster
+            showToast("Duyuru başarıyla düzenlendi.");
+
+            // Modalı kapat
+            const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+            editModal.hide();
+        }
+
+        // Duyuruyu silme fonksiyonu
+        function deleteAnnouncement() {
+            console.log("Duyuru silindi.");
+
+            // Toast mesajı göster
+            showToast("Duyuru başarıyla silindi.");
+
+            // Modalı kapat
+            const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
+            deleteModal.hide();
+        }
+
+    </script>
 </body>
 
 </html>
