@@ -1,6 +1,6 @@
 # Japon Pastanesi
 
-Bu proje, "Web Tasarımı 1" dersi ve isterleri kapsamında geliştirilen projedir. Projeye ait rapor, isterler ve diğer bağlantıları "Ekler" kısmında bulabilirsiniz.
+Bu proje, "Web Tasarımı 1" dersi ve isterleri kapsamında geliştirilen projedir. Projeye ait rapor ve diğer bağlantıları "Ekler" kısmında bulabilirsiniz.
 
 ## Projeyi Klonlayın
 
